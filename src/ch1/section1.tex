@@ -6,6 +6,7 @@
 consequences of the axioms defining a field. Prove, in particular,
 that if $\F$ is a field, and if $\alpha$, $\beta$, and $\gamma$ belong
 to $\F$, then the following relations hold.
+\label{exercise:field-properties}
 \begin{enumerate}
 \item $0 + \alpha = \alpha$.
   \begin{proof}
@@ -191,10 +192,10 @@ of $\alpha$ and $\beta$ by $m$.
     by $m$.
 
     Finally, to show the converse, note that if $m = ab$ where
-    $a,b>1$, then $a,b\in\Z_m$ but $ab = 0$. By an earlier result, if
-    $Z_m$ is a field, then $ab = 0$ implies that $a = 0$ or $b = 0$,
-    which is a contradiction. Therefore $Z_m$ is not a field in this
-    case.
+    $a,b>1$, then $a,b\in\Z_m$ but $ab = 0$. By an earlier result
+    (Exercise~\ref{exercise:field-properties}), if $Z_m$ is a field,
+    then $ab = 0$ implies that $a = 0$ or $b = 0$, which is a
+    contradiction. Therefore $Z_m$ is not a field in this case.
   \end{proof}
 \item What is $-1$ in $\Z_5$?
   \begin{solution}
@@ -309,5 +310,58 @@ $\alpha + \beta\sqrt2$, where $\alpha$ and $\beta$ are rational.
 \item What if the coefficients are allowed to be real numbers?
   \begin{solution}
     This set is still not a field for the same reason.
+  \end{solution}
+\end{enumerate}
+
+\Exercise7 Let $\F$ be the set of all (ordered) pairs
+$(\alpha, \beta)$ of real numbers.
+\begin{enumerate}
+\item If addition and multiplication are defined by
+  \begin{equation*}
+    (\alpha,\beta) + (\gamma,\delta) = (\alpha+\gamma,\beta+\delta)
+  \end{equation*}
+  and
+  \begin{equation*}
+    (\alpha,\beta)(\gamma,\delta) = (\alpha\gamma,\beta\delta),
+  \end{equation*}
+  does $\F$ become a field?
+  \begin{solution}
+    If $\F$ were to be a field with the above operations, then the
+    additive identity would have to be $(0, 0)$ and the multiplicative
+    identity would be $(1,1)$. But then, for example, the element
+    $(0, 1)$ would have no multiplicative inverse since for all real
+    $a$ and $b$, $(a,b)(0,1) = (0,b) \neq (1,1)$. It follows that $\F$
+    is not a field.
+  \end{solution}
+\item If addition and multiplication are defined by
+  \begin{equation*}
+    (\alpha, \beta) + (\gamma, \delta) = (\alpha + \gamma, \beta + \delta)
+  \end{equation*}
+  and
+  \begin{equation*}
+    (\alpha, \beta)(\gamma,\delta) = (\alpha\gamma - \beta\delta,
+    \alpha\delta + \beta\gamma),
+  \end{equation*}
+  is $\F$ a field then?
+  \begin{solution}
+    Yes, $\F$ is a field in this case. In fact, $\F$ is isomorphic to
+    the complex numbers $\C$ (this is actually one way of defining the
+    complex numbers). Here $(0,0)$ takes the role of the additive
+    identity, $(1,0)$ takes the role of the multiplicative identity,
+    and any complex number $a + bi$ corresponds to the element $(a,b)$
+    in $\F$.
+  \end{solution}
+\item What happens (in both the preceding cases) if we consider
+  ordered pairs of complex numbers instead?
+  \begin{solution}
+    In the first case $\F$ is not a field for the same reason given
+    above. The second case is more interesting, but it is not a field
+    either. Consider,
+    \begin{equation*}
+      (1, i)(1, -i) = (1 - 1, 0) = (0, 0).
+    \end{equation*}
+    In this case we see that $\F$ has two nonzero elements whose
+    product is zero, but this is not possible for a field, as was
+    proven in Exercise~\ref{exercise:field-properties}.
   \end{solution}
 \end{enumerate}
