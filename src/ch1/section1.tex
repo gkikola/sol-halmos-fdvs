@@ -8,12 +8,102 @@ that if $\F$ is a field, and if $\alpha$, $\beta$, and $\gamma$ belong
 to $\F$, then the following relations hold.
 \begin{enumerate}
 \item $0 + \alpha = \alpha$.
+  \begin{proof}
+    By the commutativity of addition and the definition of $0$,
+    \begin{equation*}
+      0 + \alpha = \alpha + 0 = \alpha. \qedhere
+    \end{equation*}
+  \end{proof}
 \item If $\alpha + \beta = \alpha + \gamma$, then $\beta = \gamma$.
+  \begin{proof}
+    Adding $-\alpha$ to both sides of the first equation gives
+    \begin{equation*}
+      (\alpha + \beta) + (-\alpha) = (\alpha + \gamma) + (-\alpha),
+    \end{equation*}
+    which by associativity and commutativity of addition gives
+    \begin{equation*}
+      (\alpha + (-\alpha)) + \beta = (\alpha + (-\alpha)) + \gamma,
+    \end{equation*}
+    and by definition of additive inverses, this gives
+    \begin{equation*}
+      0 + \beta = 0 + \gamma
+      \quad\text{or}\quad
+      \beta = \gamma,
+    \end{equation*}
+    making use of the fact that $0 + \delta = \delta$ for any
+    $\delta\in\F$ (already proven above).
+  \end{proof}
 \item $\alpha + (\beta - \alpha) = \beta$. (Here
   $\beta - \alpha = \beta + (-\alpha)$.)
+  \begin{proof}
+    This follows from commutativity and associativity of addition:
+    \begin{equation*}
+      \alpha + (\beta - \alpha)
+      = \alpha + (-\alpha + \beta)
+      = (\alpha - \alpha) + \beta
+      = 0 + \beta
+      = \beta. \qedhere
+    \end{equation*}
+  \end{proof}
 \item $\alpha\cdot0 = 0\cdot\alpha = 0$.
+  \begin{proof}
+    By definition of $0$ and $1$ and by distributivity we have
+    \begin{equation*}
+      \alpha\cdot0 = \alpha(1 - 1)
+      = \alpha\cdot1 - \alpha\cdot1
+      = \alpha - \alpha = 0.
+    \end{equation*}
+    By commutativity of multiplication, $0\cdot\alpha = 0$ as well.
+  \end{proof}
 \item $(-1)\alpha = -\alpha$.
+  \begin{proof}
+    From the various field axioms we have
+    \begin{align*}
+      (-1)\alpha
+      &= 0 + (-1)\alpha
+        = (\alpha - \alpha) + (-1)\alpha \\
+      &= (-\alpha + \alpha) + \alpha(-1) \\
+      &= -\alpha + (\alpha\cdot1 + \alpha(-1)) \\
+      &= -\alpha + \alpha(1 - 1) \\
+      &= -\alpha + \alpha\cdot0 \\
+      &= -\alpha + 0
+        = -\alpha. \qedhere
+    \end{align*}
+  \end{proof}
 \item $(-\alpha)(-\beta) = \alpha\beta$.
+  \begin{proof}
+    Since
+    \begin{align*}
+      (-1)(-1) + (-1) &= (-1)(-1) + (-1)1 \\
+                      &= (-1)(-1 + 1) = -1\cdot0 = 0,
+    \end{align*}
+    it follows that $(-1)(-1)$ is an additive inverse of $-1$. Since
+    additive inverses are unique, we have $(-1)(-1) = 1$. Using this
+    fact along with the previous result and with commutativity and
+    associativity of multiplication we have
+    \begin{equation*}
+      (-\alpha)(-\beta)
+      = ((-1)\alpha)((-1)\beta)
+      = ((-1)(-1))(\alpha\beta)
+      = 1(\alpha\beta) = \alpha\beta
+    \end{equation*}
+    as desired.
+  \end{proof}
 \item If $\alpha\beta = 0$, then either $\alpha = 0$ or $\beta = 0$
   (or both).
+  \begin{proof}
+    Let $\alpha\beta = 0$. If $\alpha = 0$ then we are done, so
+    suppose $\alpha$ is nonzero. Then $\alpha$ has a unique
+    multiplicative inverse $\alpha^{-1}$. Multiplying both sides of
+    the original equation by this inverse gives
+    \begin{equation*}
+      \alpha^{-1}(\alpha\beta) = \alpha^{-1}\cdot0
+    \end{equation*}
+    which gives
+    \begin{equation*}
+      (\alpha^{-1}\alpha)\beta = 0.
+    \end{equation*}
+    And since $\alpha^{-1}\alpha = \alpha\alpha^{-1} = 1$ we have
+    $\beta = 0$ which completes the proof.
+  \end{proof}
 \end{enumerate}
