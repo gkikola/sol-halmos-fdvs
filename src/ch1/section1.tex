@@ -107,3 +107,102 @@ to $\F$, then the following relations hold.
     $\beta = 0$ which completes the proof.
   \end{proof}
 \end{enumerate}
+
+\Exercise2
+\begin{enumerate}
+\item Is the set of all positive integers a field?
+  \begin{solution}
+    The set of positive integers (note that Halmos defines this set as
+    including $0$) is not a field because, for example, $1$ does not
+    have an additive inverse in this set.
+  \end{solution}
+\item What about the set of all integers?
+  \begin{solution}
+    The set of all integers is not a field since, for example, $2$
+    does not have a multiplicative inverse in the set.
+  \end{solution}
+\item Can the answers to these questions be changed by re-defining
+  addition or multiplication (or both)?
+  \begin{solution}
+    Yes, though the operations can become rather complicated. For
+    example, we can form a bijection (a one-to-one correspondence) $f$
+    between the integers and the rationals since both are countable
+    sets. Then define addition of integers $\oplus$ and multiplication
+    of integers $\otimes$ by
+    \begin{equation*}
+      \alpha\oplus\beta = f^{-1}(f(\alpha)+f(\beta))
+    \end{equation*}
+    and
+    \begin{equation*}
+      \alpha\otimes\beta = f^{-1}(f(\alpha)\cdot f(\beta)),
+    \end{equation*}
+    where $+$ and $\cdot$ indicate the usual operations on the
+    rationals. Since the rationals form a field, it is not difficult
+    to show that the binary operations $\oplus$ and $\otimes$ make the
+    integers into a field with $f^{-1}(0)$ taking the role of the
+    additive identity and $f^{-1}(1)$ taking the role of the
+    multiplicative identity.
+  \end{solution}
+\end{enumerate}
+
+\Exercise3 Let $m$ be an integer, $m\geq2$, and let $\Z_m$ be the set
+of all positive integers less than $m$,
+\begin{equation*}
+  \Z_m = \{0,1,\dots,m-1\}.
+\end{equation*}
+If $\alpha$ and $\beta$ are in $\Z_m$, let $\alpha + \beta$ be the
+least positive remainder obtained by dividing the (ordinary) sum of
+$\alpha$ and $\beta$ by $m$, and, similarly, let $\alpha\beta$ be the
+least positive remainder obtained by dividing the (ordinary) product
+of $\alpha$ and $\beta$ by $m$.
+\begin{enumerate}
+\item Prove that $\Z_m$ is a field if and only if $m$ is a prime.
+  \begin{proof}
+    Note that addition and multiplication, as defined here, are both
+    closed since dividing by $m$ will always produce a remainder
+    between $0$ and $m - 1$. Note also that commutativity and
+    associativity of these operations follow from the commutativity
+    and associativity of ordinary addition and multiplication (for
+    example, dividing $\alpha + \beta$ by $m$ produces the same
+    remainder as dividing $\beta + \alpha$ by $m$).
+
+    Also note that $\Z_m$ contains the additive identity $0$ and the
+    multiplicative identity $1$, since $\alpha + 0$, when divided by
+    $m$, always produces the remainder $\alpha$ and similarly for
+    $1\alpha$. We also have additive inverses since $-\alpha$ divided
+    by $m$ produces a remainder of $m - \alpha$, so that
+    $\alpha + -\alpha = \alpha + (m - \alpha)$ gives the expected
+    remainder $0$.
+
+    Therefore, to show that $\Z_m$ is a field, we only need show that
+    every nonzero element has a multiplicative inverse.
+
+    We will make use of some results from number theory. Suppose $m$
+    is prime. Then for any nonzero $\alpha\in\Z_m$, the greatest
+    common divisor of $\alpha$ and $m$ must be $1$. By B\'ezout's
+    Identity, there exist integers $x$ and $y$ such that
+    \begin{equation*}
+      \alpha x + my = 1,
+    \end{equation*}
+    (we are here using ordinary addition and multiplication). Then
+    $\alpha x = -my + 1$, and it follows that $\alpha x$, when divided
+    by $m$, leaves a remainder of $1$. Therefore we can take
+    $\alpha^{-1}$ to be the least positive remainder of dividing $x$
+    by $m$.
+
+    Finally, to show the converse, note that if $m = ab$ where
+    $a,b>1$, then $a,b\in\Z_m$ but $ab = 0$. By an earlier result, if
+    $Z_m$ is a field, then $ab = 0$ implies that $a = 0$ or $b = 0$,
+    which is a contradiction. Therefore $Z_m$ is not a field in this
+    case.
+  \end{proof}
+\item What is $-1$ in $\Z_5$?
+  \begin{solution}
+    The additive inverse of $1$ in $\Z_5$ is $4$, since $1 + 4 = 0$.
+  \end{solution}
+\item What is $\frac13$ in $\Z_7$?
+  \begin{solution}
+    The multiplicative inverse of $3$ in $\Z_7$ is $5$ since
+    $3\cdot5 = 1$. Therefore $1\cdot3^{-1} = 1\cdot5 = 5$.
+  \end{solution}
+\end{enumerate}
