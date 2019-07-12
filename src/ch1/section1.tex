@@ -160,10 +160,10 @@ of $\alpha$ and $\beta$ by $m$.
   \begin{proof}
     Note that addition and multiplication, as defined here, are both
     closed since dividing by $m$ will always produce a remainder
-    between $0$ and $m - 1$. Note also that commutativity and
-    associativity of these operations follow from the commutativity
-    and associativity of ordinary addition and multiplication (for
-    example, dividing $\alpha + \beta$ by $m$ produces the same
+    between $0$ and $m - 1$. Note also that commutativity,
+    associativity, and distributivity of these operations follow from
+    the respective properties of ordinary addition and multiplication
+    (for example, dividing $\alpha + \beta$ by $m$ produces the same
     remainder as dividing $\beta + \alpha$ by $m$).
 
     Also note that $\Z_m$ contains the additive identity $0$ and the
@@ -204,5 +204,110 @@ of $\alpha$ and $\beta$ by $m$.
   \begin{solution}
     The multiplicative inverse of $3$ in $\Z_7$ is $5$ since
     $3\cdot5 = 1$. Therefore $1\cdot3^{-1} = 1\cdot5 = 5$.
+  \end{solution}
+\end{enumerate}
+
+\Exercise4 The example of $\Z_p$ (where $p$ is prime) shows that not
+quite all the laws of elementary arithmetic hold in fields; in $\Z_2$,
+for instance, $1 + 1 = 0$. Prove that if $\F$ is a field, then either
+the result of repeatedly adding $1$ to itself is always different from
+$0$, or else the first time that it is equal to $0$ occurs when the
+number of summands is a prime. (The {\em characteristic} of the field
+$\F$ is defined to be $0$ in the first case and the crucial prime in
+the second.)
+\begin{proof}
+  For this exercise, let $n\cdot\alpha$ represent the result of adding
+  $\alpha$ to itself $n$ times, where $n$ is an ordinary strictly
+  positive integer and $\alpha$ is in the field $\F$. If $n\cdot1$ is
+  never $0$ for any $n$ then we are done, so suppose there is some
+  particular $n$ such that $n\cdot1 = 0$. Obviously $n>1$ since the
+  additive and multiplicative identities in a field are distinct by
+  definition.
+
+  Suppose $n = ab$, so that $(ab)\cdot1 = 0$. But
+  $a\cdot(b\cdot1) = 0$ also, since adding $1$ to itself $b$ times,
+  taking the result, and adding it to itself $a$ times is the same as
+  just adding $1$ to itself $ab$ times.
+
+  Let $c = b\cdot1$. By distributivity, we can see that
+  \begin{equation*}
+    a\cdot c
+    = \overbrace{c + c + c + \cdots + c}^{\text{$a$ terms}}
+    = c(\overbrace{1 + 1 + 1 + \cdots + 1}^{\text{$a$ terms}})
+    = c(a\cdot 1).
+  \end{equation*}
+  Therefore $(b\cdot1)(a\cdot1) = 0$, and since $b\cdot1$ and
+  $a\cdot1$ are both in $\F$, we see that either $b\cdot1 = 0$ or
+  $a\cdot1 = 0$.
+
+  Now, find the prime factorization of $n$ so that
+  \begin{equation*}
+    n = p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k},
+    \quad\text{where $p_i$ is prime and $e_i\geq1$ for each $i$}.
+  \end{equation*}
+  From the above argument, we know that either $p_1\cdot1 = 0$, or
+  $p_2\cdot1 = 0$, $\dots$, or $p_k\cdot1 = 0$. And each $p_i$ is
+  smaller than $n$ (unless $n$ is itself prime), so this shows that no
+  matter what value of $n$ we choose such that $n\cdot1 = 0$, we can
+  always find a smaller prime $p$ so that $p\cdot1 = 0$. Therefore the
+  smallest possible $n$ must be prime, which completes the proof.
+\end{proof}
+
+\Exercise5 Let $\Q(\sqrt2)$ be the set of all real numbers of the form
+$\alpha + \beta\sqrt2$, where $\alpha$ and $\beta$ are rational.
+\begin{enumerate}
+\item Is $\Q(\sqrt2)$ a field?
+  \begin{solution}
+    Since
+    \begin{equation*}
+      (\alpha_1 + \beta_1\sqrt2) + (\alpha_2 + \beta_2\sqrt2)
+      = (\alpha_1 + \alpha_2) + (\beta_1 + \beta_2)\sqrt2
+    \end{equation*}
+    this shows that $a + b\in\Q(\sqrt2)$ whenever $a$ and $b$ are
+    themselves members. Similarly
+    \begin{equation*}
+      (\alpha_1 + \beta_1\sqrt2)(\alpha_2 + \beta_2\sqrt2)
+      = (\alpha_1\alpha_2 + 2\beta_1\beta_2)
+      + (\alpha_1\beta_2 + \alpha_2\beta_1)\sqrt2,
+    \end{equation*}
+    so multiplication is also closed.
+
+    Multiplicative inverses exist since if $\alpha + \beta\sqrt2$ is
+    nonzero, then
+    \begin{equation*}
+      (\alpha + \beta\sqrt2)
+      \left(\frac{\alpha}{\alpha^2 - 2\beta^2}
+        + \frac{-\beta}{\alpha^2 - 2\beta^2}\sqrt2\right)
+      = \frac{(\alpha+\beta\sqrt2)(\alpha-\beta\sqrt2)}
+      {\alpha^2 - 2\beta^2} = 1.
+    \end{equation*}
+
+    The remaining properties follow from the properties of the
+    rationals, with $0 = 0 + 0\sqrt2$ and $1 = 1 + 0\sqrt2$ taking
+    their usual roles. Therefore $\Q(\sqrt2)$ is indeed a field.
+  \end{solution}
+\item What if $\alpha$ and $\beta$ are required to be integers?
+  \begin{solution}
+    If $\alpha$ and $\beta$ must be integers, then the resulting set
+    does not form a field since $2 = 2 + 0\sqrt2$ (for example) does
+    not have a multiplicative inverse.
+  \end{solution}
+\end{enumerate}
+
+\Exercise6
+\begin{enumerate}
+\item Does the set of all polynomials with integer coefficients form a
+  field?
+  \begin{solution}
+    If the set (call it $\Z[x]$) did form a field, $1$ would have to
+    be the multiplicative identity. But there is no polynomial which,
+    when multiplied by the polynomial $x$, gives $1$ (that is, $1/x$
+    is not a polynomial). Since there is a nonzero element in $\Z[x]$
+    which does not have a multiplicative inverse, $\Z[x]$ cannot be a
+    field.
+  \end{solution}
+\item What if the coefficients are allowed to be real numbers?
+  \begin{solution}
+    This set is still not a field for the same reason.
   \end{solution}
 \end{enumerate}
