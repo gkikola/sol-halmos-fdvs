@@ -12,6 +12,13 @@ formatting mistakes, or other issues. I appreciate any corrections or
 feedback.
 
 
+Download
+--------
+
+This solution guide is available as a
+[PDF file](https://www.gregkikola.com/guides/fdvssol.pdf).
+
+
 Building from Source
 --------------------
 
