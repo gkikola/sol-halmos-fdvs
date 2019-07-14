@@ -1,0 +1,75 @@
+\sectionnum{4}
+\section{Vector Spaces, Examples, and Comments}
+
+\Exercise1 Prove that if $x$ and $y$ are vectors and if $\alpha$ is a
+scalar, then the following relations hold.
+\begin{enumerate}
+\item $0 + x = x$.
+  \begin{proof}
+    This follows directly from the commutativity of addition of
+    vectors along with the definition of the vector $0$.
+  \end{proof}
+\item $-0 = 0$.
+  \begin{proof}
+    By definition of $0$, we have $-0 + 0 = -0$. But the left-hand
+    side is equal to $0$ by definition of additive inverses, so
+    $0 = -0$.
+  \end{proof}
+\item $\alpha\cdot0 = 0$.
+  \begin{proof}
+    Since $0 = 0 + 0$, we have by distributivity that
+    \begin{equation*}
+      \alpha\cdot0 = \alpha(0 + 0) = \alpha\cdot0 + \alpha\cdot0.
+    \end{equation*}
+    Adding $-(\alpha\cdot0)$ to both sides then gives
+    $0 = \alpha\cdot0$ as desired.
+  \end{proof}
+\item $0\cdot x = 0$.
+  \begin{proof}
+    The proof is similar to the previous one, except that the $0$ on
+    the left is a scalar:
+    \begin{equation*}
+      0x = (0 + 0)x = 0x + 0x,
+    \end{equation*}
+    and adding $-(0x)$ to both sides gives the desired result.
+  \end{proof}
+\item If $\alpha x = 0$, then either $\alpha = 0$ or $x = 0$ (or
+  both).
+  \begin{proof}
+    Let $\alpha x = 0$. If $\alpha = 0$ then we are done, so suppose
+    $\alpha$ is nonzero. Then $\alpha\in\F$ has an inverse
+    $\alpha^{-1}$. Multiplying both sides of $\alpha x = 0$ by
+    $\alpha^{-1}$ then gives
+    \begin{equation*}
+      \alpha^{-1}(\alpha x) = \alpha^{-1}\cdot0,
+    \end{equation*}
+    which implies
+    \begin{equation*}
+      1x = x = 0,
+    \end{equation*}
+    completing the proof.
+  \end{proof}
+\item $-x = (-1)x$.
+  \begin{proof}
+    By distributivity we have
+    \begin{equation*}
+      x + (-1)x = 1x + (-1)x = (1 + -1)x = 0x = 0.
+    \end{equation*}
+    Now adding $-x$ to both sides and simplifying gives $(-1)x = -x$
+    as required.
+  \end{proof}
+\item $y + (x - y) = x$. (Here $x - y = x + (-y)$.)
+  \begin{proof}
+    Using commutativity and associativity of addition gives
+    \begin{equation*}
+      y + (x - y) = (y + (-y)) + x = 0 + x = x.\qedhere
+    \end{equation*}
+  \end{proof}
+\end{enumerate}
+
+\Exercise2 If $p$ is a prime, then $\Z_p^n$ is a vector space over
+$\Z_p$; how many vectors are there in this vector space?
+\begin{solution}
+  Since $\Z_p$ has $p$ members, the number of possible vectors is
+  $p^n$.
+\end{solution}
