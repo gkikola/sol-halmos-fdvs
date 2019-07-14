@@ -90,3 +90,85 @@ operations? Why?
   $\V$ is not a vector space since $1x \neq x$ when $\xi_2$ is
   nonzero.
 \end{solution}
+
+\Exercise4 Sometimes a subset of a vector space is itself a vector
+space (with respect to the linear operations already given). Consider,
+for example, the vector space $\C^3$ and the subsets $\V$ of $\C^3$
+consisting of those vectors $(\xi_1, \xi_2, \xi_3)$ for which
+\begin{enumerate}
+\item $\xi_1$ is real,
+\item $\xi_1 = 0$,
+\item either $\xi_1 = 0$ or $\xi_2 = 0$,
+\item $\xi_1 + \xi_2 = 0$,
+\item $\xi_1 + \xi_2 = 1$.
+\end{enumerate}
+In which of these cases is $\V$ a vector space?
+\begin{solution}
+  To check whether a subset $\V$ of a vector space is a subspace, we
+  only need to ensure three things: that the subset $\V$ is nonempty,
+  that for all $x,y\in\V$ also $x + y\in\V$, and that for all
+  $\alpha\in\F$ and $x\in\V$ also $\alpha x\in\V$. It is then easy to
+  check that all of the axioms hold. For example, since $\V$ must be
+  nonempty, we can take $x\in\V$ so that $0x = 0\in\V$. The other
+  properties are similar.
+  \begin{enumerate}
+  \item This is a vector space over $\R$ since it is nonempty, it is
+    closed under vector addition, and it is closed under scalar
+    multiplication.
+
+    However, this is not a vector space over the field $\C$ since
+    scalar multiplication is not closed. For example, $(1,1,1)\in\V$
+    but $i(1, 1, 1)\not\in\V$.
+  \item $0\in\V$ so $\V$ is nonempty. For any $x = (0,\xi_2,\xi_3)$
+    and $y = (0,\eta_2,\eta_3)\in\V$ we have $x + y\in\V$ so $\V$ is
+    closed under addition. And for any $\alpha\in\C$ we have
+    $\alpha x = (0, \alpha\xi_2, \alpha\xi_3)\in\V$ so $\V$ is closed
+    under scalar multiplication. Therefore $\V$ is a vector space.
+  \item Since $(1, 0, 0)\in\V$ and $(0, 1, 0)\in\V$ but their sum
+    $(1, 1, 0)\not\in\V$, we see that $\V$ is not a vector space.
+  \item This $\V$ is obviously not closed under scalar multiplication,
+    so it cannot be a vector space.
+  \item This $\V$ does not contain the zero vector, so it cannot be a
+    vector space. \qedhere
+  \end{enumerate}
+\end{solution}
+
+\Exercise5 Consider the vector space $\P$ and the subsets $\V$ of $\P$
+consisting of those vectors (polynomials) $x$ for which
+\begin{enumerate}
+\item $x$ has degree $3$,
+\item $2x(0) = x(1)$,
+\item $x(t) \geqq 0$ whenever $0\leqq t\leqq1$,
+\item $x(t) = x(1 - t)$ for all $t$.
+\end{enumerate}
+In which of these cases is $\V$ a vector space?
+\begin{solution}
+  \begin{enumerate}
+  \item This $\V$ is not closed under addition. For example, the
+    polynomials $t^3$ and $-t^3 + t^2$ are both in $\V$ but their sum
+    is not (it has degree $2$).
+  \item $\V$ is nonempty since $0\in\V$. Suppose $x,y\in\V$. Then
+    \begin{equation*}
+      2(x + y)(0) = 2(x(0) + y(0))
+      = 2x(0) + 2y(0) = x(1) + y(1) = (x + y)(1)
+    \end{equation*}
+    and for any $\alpha\in\C$,
+    \begin{equation*}
+      2(\alpha x)(0) = 2\alpha(x(0)) = \alpha(2x(0))
+      = \alpha(x(1)) = (\alpha x)(1).
+    \end{equation*}
+    Therefore $\V$ is a vector space.
+  \item This $\V$ is not closed under scalar multiplication. For
+    example, $t\in\V$ but $(-1)t = -t\not\in\V$.
+  \item $0\in\V$ so $\V$ is nonempty. And for any $x,y\in\V$ and
+    $\alpha\in\C$, we have
+    \begin{equation*}
+      (x + y)(t) = x(t) + y(t) = x(1 - t) + y(1 - t) = (x + y)(1 - t)
+    \end{equation*}
+    and
+    \begin{equation*}
+      (\alpha x)(t) = \alpha(x(t)) = \alpha(x(1 - t)) = (\alpha x)(1 - t),
+    \end{equation*}
+    so $\V$ is a vector space. \qedhere
+  \end{enumerate}
+\end{solution}
