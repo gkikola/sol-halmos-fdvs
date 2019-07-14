@@ -3,6 +3,7 @@
 
 \Exercise1 Prove that if $x$ and $y$ are vectors and if $\alpha$ is a
 scalar, then the following relations hold.
+\label{exercise:spaces:vspace-properties}
 \begin{enumerate}
 \item $0 + x = x$.
   \begin{proof}
@@ -72,4 +73,20 @@ $\Z_p$; how many vectors are there in this vector space?
 \begin{solution}
   Since $\Z_p$ has $p$ members, the number of possible vectors is
   $p^n$.
+\end{solution}
+
+\Exercise3 Let $\V$ be the set of all (ordered) pairs of real
+numbers. If $x = (\xi_1,\xi_2)$ and $y = (\eta_1,\eta_2)$ are elements
+of $\V$, write
+\begin{align*}
+  x + y &= (\xi_1 + \eta_1, \xi_2 + \eta_2) \\
+  \alpha x &= (\alpha\xi_1, 0) \\
+  0 &= (0, 0) \\
+  -x &= (-\xi_1, -\xi_2).
+\end{align*}
+Is $\V$ a vector space with respect to these definitions of the linear
+operations? Why?
+\begin{solution}
+  $\V$ is not a vector space since $1x \neq x$ when $\xi_2$ is
+  nonzero.
 \end{solution}
