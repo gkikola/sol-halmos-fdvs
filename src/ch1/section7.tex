@@ -1,0 +1,63 @@
+\sectionnum{7}
+\section{Linear Dependence, Linear Combinations, and Bases}
+
+\Exercise1
+\begin{enumerate}
+\item Prove that the four vectors
+  \begin{align*}
+    x &= (1, 0, 0), \\
+    y &= (0, 1, 0), \\
+    z &= (0, 0, 1), \\
+    u &= (1, 1, 1),
+  \end{align*}
+  in $\C^3$ form a linearly dependent set, but any three of them are
+  linearly independent.
+  \begin{proof}
+    The vectors $x$, $y$, $z$, and $u$ are linearly dependent since
+    \begin{equation*}
+      x + y + z - u = 0.
+    \end{equation*}
+    However any three them form a linearly independent set, as we will
+    now show. It should be clear that the set $\{x,y,z\}$ is linearly
+    independent, so we just need to show that any two of $x,y,z$ taken
+    together with $u$ forms a linearly independent set.
+
+    There are three cases, but we can handle them all at once by
+    observing the symmetry in the coordinates of $x$, $y$, and
+    $z$. If, for example, $x$, $y$, and $u$ are independent, then
+    exactly the same reasoning and indeed the same system of equations
+    (with some variable indices switched around) will show that $x$,
+    $z$, and $u$ are independent and that $y$, $z$, and $u$ are
+    also. Therefore we will only show the linear independence of $x$,
+    $y$, and $u$, and that will suffice.
+
+    So let
+    \begin{equation*}
+      \alpha_1x + \alpha_2y + \alpha_3u = 0.
+    \end{equation*}
+    By equating the third coordinate of each side we get
+    $\alpha_3 = 0$. Then from the first coordinates we get
+    $\alpha_1 + \alpha_3 = 0$ so that $\alpha_1 = 0$. Similarly, from
+    the second coordinates we get $\alpha_2 = 0$. Therefore
+    $\alpha_1,\alpha_2,\alpha_3$ must all be zero, which establishes
+    the linear independence of the three vectors, completing the
+    proof.
+  \end{proof}
+\item If the vectors $x$, $y$, $z$, and $u$ in $\P$ are defined by
+  $x(t) = 1$, $y(t) = t$, $z(t) = t^2$, and $u(t) = 1 + t + t^2$,
+  prove that $x$, $y$, $z$, and $u$ are linearly dependent, but any
+  three of them are linearly independent.
+  \begin{proof}
+    Observe that there is a natural correspondence between these
+    vectors and the vectors in the previous part of this exercise:
+    each of $x$, $y$, and $z$ have one coefficient equal to $1$ and
+    the others $0$, while $u$ has all coefficients equal to $1$. So
+    the same relation
+    \begin{equation*}
+      x + y + z - u = 0
+    \end{equation*}
+    shows that the four vectors are linearly dependent, while exactly
+    the same reasoning as before will show that any three of them are
+    linearly independent.
+  \end{proof}
+\end{enumerate}
