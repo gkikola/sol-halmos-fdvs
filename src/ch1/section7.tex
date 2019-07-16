@@ -61,3 +61,152 @@
     linearly independent.
   \end{proof}
 \end{enumerate}
+
+\Exercise2 Prove that if $\R$ is considered as a rational vector
+space, then a necessary and sufficient condition that the vectors $1$
+and $\xi$ in $\R$ be linearly independent is that the real number
+$\xi$ be irrational.
+\begin{proof}
+  First suppose $\xi$ is irrational. If possible, let there be scalars
+  $\alpha_1$ and $\alpha_2$, not both zero, such that
+  \begin{equation*}
+    \alpha_1 + \alpha_2\xi = 0.
+  \end{equation*}
+  Then if $\alpha_2$ is nonzero we can solve for $\xi$ to get
+  \begin{equation*}
+    \xi = -\frac{\alpha_1}{\alpha_2},
+  \end{equation*}
+  which is rational, a contradiction. On the other hand if $\alpha_2$
+  is zero then $\alpha_1$ must be zero as well, again a
+  contradiction. So $1$ and $\xi$ must be linearly independent.
+
+  Conversely, suppose that $1$ and $\xi$ are linearly independent. If
+  $\xi$ is rational, then we can choose rational scalars
+  $\alpha_1 = -\xi$ and $\alpha_2 = 1$ so that
+  $\alpha_1 + \alpha_2\xi = 0$, contradicting the assumption of linear
+  independence. So $\xi$ must be irrational.
+\end{proof}
+
+\Exercise3 Is it true that if $x$, $y$, and $z$ are linearly
+independent vectors, then so also are $x + y$, $y + z$, and $z + x$?
+\begin{solution}
+  No, this is not always true, depending on the nature of the field of
+  scalars, as we will soon see. Let $x$, $y$, and $z$ be linearly
+  independent vectors in a vector space.
+
+  Now suppose that
+  \begin{equation*}
+    \alpha_1(x + y) + \alpha_2(y + z) + \alpha_3(z + x) = 0,
+  \end{equation*}
+  for scalars $\alpha_1,\alpha_2,\alpha_3$. Then
+  \begin{equation*}
+    (\alpha_1 + \alpha_3)x + (\alpha_1 + \alpha_2)y
+    + (\alpha_2 + \alpha_3)z = 0.
+  \end{equation*}
+  Now, since $x$, $y$, and $z$ are linearly independent, each of the
+  above coefficients must be zero. So $\alpha_1 = -\alpha_3$,
+  $\alpha_1 = -\alpha_2$ and $\alpha_3 = -\alpha_2$. But then we have
+  \begin{equation*}
+    \alpha_2 = -\alpha_1 = \alpha_3 = -\alpha_2.
+  \end{equation*}
+  Now, if our vector space is over the field $\R$ or $\C$, then
+  $\alpha_2 = -\alpha_2$ implies that $\alpha_2 = 0$ so that
+  $\alpha_1$ and $\alpha_3$ are also zero. This would show linear
+  independence.
+
+  However, consider what happens in the field $\Z_2$! We saw this and
+  other finite fields in Exercise~\ref{exercise:the-field-Zp}. In
+  $\Z_2$, we have $1 + 1 = 0$ or $1 = -1$. So if our vector space is
+  over this field, then we may let
+  $\alpha_1 = \alpha_2 = \alpha_3 = 1$. Then
+  \begin{multline*}
+    (x + y) + (y + z) + (z + x) = (1 + 1)x + (1 + 1)y + (1 + 1)z \\
+    = 0x + 0y + 0z = 0,
+  \end{multline*}
+  so that these vectors are in fact linearly dependent even if $x$,
+  $y$, and $z$ are independent.
+\end{solution}
+
+\Exercise4
+\begin{enumerate}
+\item Under what conditions on the scalar $\xi$ are the vectors
+  $(1+\xi, 1-\xi)$ and $(1-\xi, 1+\xi)$ in $\C^2$ linearly dependent?
+  \begin{solution}
+    Let $x = (1+\xi,1-\xi)$ and $y = (1-\xi, 1+\xi)$. If $x$ and $y$
+    are linearly dependent, then there are $\alpha_1$ and $\alpha_2$
+    in $\C$, not both zero, for which $\alpha_1x + \alpha_2y =
+    0$. This gives
+    \begin{align}
+      \alpha_1(1 + \xi) + \alpha_2(1 - \xi) &= 0
+      \label{eq:x-y-lin-dep-eq-1}\\
+      \alpha_1(1 - \xi) + \alpha_2(1 + \xi) &= 0.
+      \label{eq:x-y-lin-dep-eq-2}
+    \end{align}
+    Subtracting \eqref{eq:x-y-lin-dep-eq-2} from
+    \eqref{eq:x-y-lin-dep-eq-1} then gives
+    \begin{equation*}
+      2\alpha_1\xi - 2\alpha_2\xi = 0.
+    \end{equation*}
+    So either $\xi = 0$ or $\alpha_1 - \alpha_2 = 0$. But if the
+    latter is true, then \eqref{eq:x-y-lin-dep-eq-1} implies that
+    $\alpha_1 = \alpha_2 = 0$, which is not possible. So $x$ and $y$
+    are linearly dependent if and only if $\xi = 0$.
+  \end{solution}
+\item Under what conditions on the scalar $\xi$ are the vectors
+  $(\xi, 1, 0)$, $(1, \xi, 1)$, and $(0, 1, \xi)$ in $\R^3$ linearly
+  dependent?
+  \begin{solution}
+    Call the vectors $x$, $y$, and $z$, respectively. First note that
+    if $\xi = 0$, then $x = z$ and the vectors are obviously linearly
+    dependent. So we will assume $\xi\neq0$.
+
+    Now, assume that $x$, $y$, and $z$ are linearly dependent, so that
+    there are $\alpha_1,\alpha_2,\alpha_3$ not all zero such that
+    \begin{equation*}
+      \alpha_1x + \alpha_2y + \alpha_3z = 0.
+    \end{equation*}
+    Then by equating coordinates we have the following system of
+    equations.
+    \begin{align*}
+      \alpha_1\xi + \alpha_2 &= 0 \\
+      \alpha_1 + \alpha_2\xi + \alpha_3 &= 0 \\
+      \alpha_2 + \alpha_3\xi &= 0.
+    \end{align*}
+    Since $\xi$ is nonzero, equating the first and third equations
+    gives $\alpha_1 = \alpha_3$. So the second equation becomes
+    $2\alpha_1 + \alpha_2\xi = 0$. Then
+    \begin{equation*}
+      \alpha_2 = -\frac{2\alpha_1}\xi.
+    \end{equation*}
+    By setting $\alpha = \alpha_1$, we see that if $x$, $y$,
+    and $z$ are linearly dependent, then
+    \begin{equation}
+      \label{eq:dep-rel-for-xi}
+      \alpha x - \frac{2\alpha}\xi y + \alpha z = 0.
+    \end{equation}
+    Equating first coordinates then gives
+    \begin{equation*}
+      \alpha\xi - \frac{2\alpha}\xi = 0
+    \end{equation*}
+    or, assuming $\alpha$ is nonzero,
+    \begin{equation*}
+      \xi^2 = 2.
+    \end{equation*}
+    It is now easy to verify that when $\xi = \pm\sqrt2$, any nonzero
+    choice for $\alpha$ will produce the linear dependence relation
+    \eqref{eq:dep-rel-for-xi}.
+
+    To summarize, if either
+    \begin{equation*}
+      \xi = 0, \quad \xi = \sqrt2, \quad\text{or}\quad \xi = -\sqrt2,
+    \end{equation*}
+    then $x$, $y$, and $z$ are linearly dependent. Otherwise, they are
+    linearly independent.
+  \end{solution}
+\item What is the answer to (b) for $\Q^3$ (in place of $\R^3$)?
+  \begin{solution}
+    In this case $\xi$ must be rational. From our previous work, we
+    see that the only value of $\xi$ which makes $x$, $y$, and $z$
+    linearly dependent is $\xi = 0$.
+  \end{solution}
+\end{enumerate}
