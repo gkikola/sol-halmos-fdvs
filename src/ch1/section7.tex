@@ -210,3 +210,104 @@ independent vectors, then so also are $x + y$, $y + z$, and $z + x$?
     linearly dependent is $\xi = 0$.
   \end{solution}
 \end{enumerate}
+
+\Exercise5
+\begin{enumerate}
+\item The vectors $(\xi_1, \xi_2)$ and $(\eta_1, \eta_2)$ in $\C^2$
+  are linearly dependent if and only if $\xi_1\eta_2 = \xi_2\eta_1$.
+  \begin{solution}
+    We will show that this is true. Let
+    \begin{equation*}
+      x = (\xi_1, \xi_2)
+      \quad\text{and}\quad
+      y = (\eta_1, \eta_2).
+    \end{equation*}
+    First note that if either $x$ or $y$ is zero (or if both are
+    zero), then the two vectors are obviously linearly dependent and
+    the relation $\xi_1\eta_2 = \xi_2\eta_1$ holds. So we may
+    henceforth assume that both $x$ and $y$ are nonzero.
+
+    Now, suppose that $x$ and $y$ are linearly dependent. Then there
+    are scalars $\alpha_1$ and $\alpha_2$ not both zero such that
+    \begin{align}
+      \label{eq:xi1-eta1-combination}
+      \alpha_1\xi_1 + \alpha_2\eta_1 &= 0 \\
+      \label{eq:xi2-eta2-combination}
+      \alpha_1\xi_2 + \alpha_2\eta_2 &= 0.
+    \end{align}
+    Without loss of generality, we will assume that $\xi_1$ is nonzero
+    (if $\xi_1 = 0$, then $\xi_2$ must be nonzero and we could proceed
+    with a similar argument to the one that follows). From
+    \eqref{eq:xi1-eta1-combination} we get
+    \begin{equation*}
+      \alpha_1 = -\alpha_2\frac{\eta_1}{\xi_1}
+    \end{equation*}
+    and substituting this for $\alpha_1$ in
+    \eqref{eq:xi2-eta2-combination} gives
+    \begin{equation*}
+      -\alpha_2\frac{\eta_1\xi_2}{\xi_1} + \alpha_2\eta_2 = 0,
+    \end{equation*}
+    or
+    \begin{equation*}
+      \alpha_2\left(\eta_2 - \frac{\eta_1\xi_2}{\xi_1}\right) = 0.
+    \end{equation*}
+    Therefore either $\alpha_2 = 0$ or
+    $\xi_1\eta_2 - \eta_1\xi_2 = 0$. Now the first case would imply
+    that $\alpha_1 = 0$ also, which cannot be. Therefore we indeed
+    have $\xi_1\eta_2 = \xi_2\eta_1$.
+
+    Conversely, suppose $\xi_1\eta_2 = \xi_2\eta_1$. Again, without
+    loss of generality we will assume that $\xi_1$ is nonzero. Set
+    \begin{equation*}
+      \alpha_1 = \eta_1
+      \quad\text{and}\quad
+      \alpha_2 = -\xi_1.
+    \end{equation*}
+    Then
+    \begin{equation*}
+      \alpha_1\xi_1 + \alpha_2\eta_1 = \xi_1\eta_1 - \xi_1\eta_1 = 0
+    \end{equation*}
+    and
+    \begin{equation*}
+      \alpha_1\xi_2 + \alpha_2\eta_2 = \xi_2\eta_1 - \xi_1\eta_2 = 0,
+    \end{equation*}
+    showing that $x$ and $y$ are linearly dependent.
+  \end{solution}
+\item Find a similar necessary and sufficient condition for the linear
+  dependence of two vectors in $\C^3$. Do the same for three vectors
+  in $\C^3$.
+  \begin{solution}
+    Let
+    \begin{equation*}
+      x = (\xi_1, \xi_2, \xi_3),
+      \quad
+      y = (\eta_1, \eta_2, \eta_3),
+      \quad\text{and}\quad
+      z = (\zeta_1, \zeta_2, \zeta_3).
+    \end{equation*}
+    We note that $x$ and $y$ are linearly dependent if and only if
+    \begin{align*}
+      \xi_2\eta_3 &= \xi_3\eta_2, \\
+      \xi_1\eta_3 &= \xi_3\eta_1, \\
+      \intertext{and}
+      \xi_1\eta_2 &= \xi_2\eta_1.
+    \end{align*}
+    The proof is similar to the previous one.
+
+    For the three vectors $x$, $y$, and $z$, a necessary and
+    sufficient condition for linear dependence is
+    \begin{equation*}
+      \xi_1(\eta_2\zeta_3 - \eta_3\zeta_2)
+      - \eta_1(\xi_2\zeta_3 - \xi_3\zeta_2)
+      + \zeta_1(\xi_2\eta_3 - \xi_3\eta_2) = 0,
+    \end{equation*}
+    but we will not prove this here.
+  \end{solution}
+\item Is there a set of three linearly independent vectors in $\C^2$?
+  \begin{solution}
+    No. Since $\{(1,0), (0,1)\}$ is a basis for $\C^2$, no set of more
+    than two vectors in $\C^2$ can be linearly independent. Although
+    this fact has not yet been established in the text by Halmos, it
+    will be proven in the next section, \S\ 8.
+  \end{solution}
+\end{enumerate}
