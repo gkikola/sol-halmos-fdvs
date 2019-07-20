@@ -383,3 +383,28 @@ to both are $(0,0,1,1)$ and $(1,1,0,0)$.
   written as a linear combination of the vectors in this set, and that
   the set is linearly independent.
 \end{solution}
+
+\Exercise8
+\begin{enumerate}
+\item Under what conditions on the scalar $\xi$ do the vectors
+  $(1,1,1)$ and $(1,\xi,\xi^2)$ form a basis of $\C^3$?
+  \begin{solution}
+    As we will see in section \S\ 8, any basis for a
+    finite-dimensional vector space must have the same number of
+    elements as any other basis. As a result, no two vectors can ever
+    form a basis for $\C^3$, though by the Theorem in section \S\ 7,
+    these two vectors could be extended to a basis, provided that
+    $\xi\neq1$ (if $\xi = 1$ then the two vectors are not linearly
+    independent).
+  \end{solution}
+\item Under what conditions on the scalar $\xi$ do the vectors
+  $(0,1,\xi)$, $(\xi,0,1)$, and $(\xi,1,1+\xi)$ form a basis of
+  $\C^3$?
+  \begin{solution}
+    There is no value for $\xi$ which will allow these three vectors
+    to form a basis, since they are not linearly independent:
+    \begin{equation*}
+      (0,1,\xi) + (\xi,0,1) - (\xi,1,1+\xi) = (0,0,0) = 0. \qedhere
+    \end{equation*}
+  \end{solution}
+\end{enumerate}
