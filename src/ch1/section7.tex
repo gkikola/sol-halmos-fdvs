@@ -311,3 +311,49 @@ independent vectors, then so also are $x + y$, $y + z$, and $z + x$?
     will be proven in the next section, \S\ 8.
   \end{solution}
 \end{enumerate}
+
+\Exercise6
+\begin{enumerate}
+\item Under what conditions on the scalars $\xi$ and $\eta$ are the
+  vectors $(1,\xi)$ and $(1,\eta)$ in $\C^2$ linearly dependent?
+  \begin{solution}
+    From the previous exercise, we have that $(1,\xi)$ and $(1,\eta)$
+    are linearly dependent if and only if $\xi = \eta$.
+  \end{solution}
+\item Under what conditions on the scalars $\xi$, $\eta$, and $\zeta$
+  are the vectors $(1,\xi,\xi^2)$, $(1,\eta,\eta^2)$, and
+  $(1,\zeta,\zeta^2)$ in $\C^3$ linearly dependent?
+  \begin{solution}
+    Again making use of the previous exercise, the three vectors are
+    linearly dependent if and only if
+    \begin{equation*}
+      (\eta\zeta^2 - \eta^2\zeta)
+      - (\xi\zeta^2 - \xi^2\zeta)
+      + (\xi\eta^2 - \xi^2\eta) = 0.
+    \end{equation*}
+    After rearranging, we get
+    \begin{align*}
+      0 &= \zeta^2(\eta - \xi) - \zeta(\eta^2 - \xi^2)
+          + \xi\eta(\eta - \xi) \\
+        &= (\eta - \xi)(\zeta^2 - \zeta(\eta + \xi) + \xi\eta) \\
+        &= (\eta - \xi)(\zeta(\zeta - \eta) - \xi(\zeta - \eta)) \\
+        &= (\eta - \xi)(\zeta - \eta)(\zeta - \xi).
+    \end{align*}
+    So a necessary and sufficient condition for the three vectors
+    $(1,\xi,\xi^2)$, $(1,\eta,\eta^2)$, and $(1,\zeta,\zeta^2)$ to be
+    linearly dependent is that either $\eta = \xi$, or $\zeta = \eta$,
+    or $\zeta = \xi$.
+  \end{solution}
+\item Guess and prove a generalization of (a) and (b) to $\C^n$.
+  \begin{solution}
+    The previous work suggests the following generalization: the $n$ vectors
+    \begin{equation*}
+      (1,\xi_1,\xi_1^2,\dots,\xi_1^{n-1}),\;
+      (1,\xi_2,\xi_2^2,\dots,\xi_2^{n-1}),\;
+      \dots,\;
+      (1,\xi_n,\xi_n^2,\dots,\xi_n^{n-1})
+    \end{equation*}
+    in $\C^n$ are linearly dependent if and only if $\xi_i = \xi_j$
+    for some $i\neq j$. We omit the proof.
+  \end{solution}
+\end{enumerate}
