@@ -357,3 +357,29 @@ independent vectors, then so also are $x + y$, $y + z$, and $z + x$?
     for some $i\neq j$. We omit the proof.
   \end{solution}
 \end{enumerate}
+
+\Exercise7 Find two bases in $\C^4$ such that the only vectors common
+to both are $(0,0,1,1)$ and $(1,1,0,0)$.
+\begin{solution}
+  One possible basis is
+  \begin{equation*}
+    \{ (1,0,0,0), \; (0,0,1,0), \; (0,0,1,1), \; (1,1,0,0) \}.
+  \end{equation*}
+  Then any vector $(\xi_1,\xi_2,\xi_3,\xi_4)$ in $\C^4$ can be written
+  \begin{multline*}
+    (\xi_1,\xi_2,\xi_3,\xi_4) \\
+    = (\xi_1 - \xi_2)(1,0,0,0) + \xi_2(1,1,0,0)
+    + (\xi_3 - \xi_4)(0,0,1,0) + \xi_4(0,0,1,1).
+  \end{multline*}
+  It is easy to show that this set of vectors is linearly independent
+  (or we could make use of Theorem~2 from the upcoming section \S\ 8),
+  so this is a basis.
+
+  A different basis is
+  \begin{equation*}
+    \{ (1,0,1,0), \; (1,0,0,1), \; (0,0,1,1), \; (1,1,0,0) \},
+  \end{equation*}
+  and a similar proof will show that any vector in $\C^4$ can be
+  written as a linear combination of the vectors in this set, and that
+  the set is linearly independent.
+\end{solution}
