@@ -408,3 +408,35 @@ to both are $(0,0,1,1)$ and $(1,1,0,0)$.
     \end{equation*}
   \end{solution}
 \end{enumerate}
+
+\Exercise9 Consider the set of all those vectors in $\C^3$ each of
+whose coordinates is either $0$ or $1$; how many different bases does
+this set contain?
+\begin{solution}
+  There are eight such vectors,
+  \begin{multline*}
+    (0,0,0),\quad (0,0,1),\quad (0,1,0), \quad (0,1,1), \quad (1,0,0), \\
+    (1,0,1), \quad (1,1,0), \quad\text{and}\quad (1,1,1).
+  \end{multline*}
+  We can exclude the zero vector since any set containing it must be
+  linearly dependent. Any set of more than three of these vectors will
+  also be linearly dependent.
+
+  Now, clearly any one of these (nonzero) vectors will form the basis
+  of a one-dimensional subspace, so these are $7$ possibilities. For
+  pairs of two vectors, there are $\binom72 = 21$ possibilities, and
+  since none of these vectors (again, excluding zero) is a multiple of
+  another, all $21$ possible bases are indeed bases for
+  two-dimensional subspaces.
+
+  Lastly, if we take sets of three vectors, there are $\binom73 = 35$
+  possibilities, but some of these are not linearly independent. For
+  example,
+  \begin{equation*}
+    (1,0,0) + (0,1,1) - (1,1,1) = 0.
+  \end{equation*}
+  It is somewhat tedious, but by checking each combination we can see
+  that there are $29$ possible bases for a three-dimensional subspace.
+
+  So, in total, there are $57$ possible bases.
+\end{solution}
