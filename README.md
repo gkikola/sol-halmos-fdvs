@@ -4,8 +4,8 @@ Selected Solutions to Paul R. Halmos's Finite-Dimensional Vector Spaces Second E
 Description
 -----------
 
-This is an unofficial solution guide to the book Finite-Dimensional
-Vector Spaces, second edition, by Paul R. Halmos.
+This is an unfinished, unofficial solution guide to the book
+Finite-Dimensional Vector Spaces, second edition, by Paul R. Halmos.
 
 Please [contact me](mailto:gkikola@gmail.com) if you find any errors,
 formatting mistakes, or other issues. I appreciate any corrections or
@@ -16,7 +16,7 @@ Download
 --------
 
 This solution guide is available as a
-[PDF file](https://www.gregkikola.com/guides/fdvssol.pdf).
+[PDF file](https://www.gregkikola.com/dl/guides/fdvssol.pdf).
 
 
 Building from Source
